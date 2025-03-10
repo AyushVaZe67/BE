@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/img7"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDashBoard">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:background="@drawable/img7"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/goToAboutFoodXpress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:text="ABOUT US"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/goToProfilePage"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="PROFILE"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"/>-->
+
+        </LinearLayout>
+
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#0562A7"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Mess Dashboard"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- Search View -->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/searchView"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="380dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/editTextSearch"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:hint="Search for available mess" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!-- RecyclerView for Restaurants -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+
+
+
+    <ScrollView android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adityaMess"
+                android:layout_margin="20dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <!-- Restaurant Image -->
+                    <ImageView
+                        android:id="@+id/imageViewRestaurant1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img2" />
+
+                    <!-- Restaurant Name -->
+                    <TextView
+                        android:id="@+id/textViewRestaurantName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/imageViewRestaurant1"
+                        android:text="ADITYA MESS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Location: Main Campus"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="50dp"
+                        android:gravity="left"
+                        android:text="Contact :+919465289230" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/goToStudentMenuPage"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Menu"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/swadMess"
+                android:elevation="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <!-- Restaurant Image -->
+                    <ImageView
+                        android:id="@+id/imageViewRestaurant2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img5" />
+
+                    <!-- Restaurant Name -->
+                    <TextView
+                        android:id="@+id/textViewRestaurantName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/imageViewRestaurant2"
+                        android:text="SWAD MESS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Location: Maitri Chowk"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="50dp"
+                        android:gravity="left"
+                        android:text="Contact :+919165289230" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/goToStudentMenuPage2"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Menu"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shitalMess"
+                android:layout_margin="20dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <!-- Restaurant Image -->
+                    <ImageView
+                        android:id="@+id/imageViewRestaurant3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img8" />
+
+                    <!-- Restaurant Name -->
+                    <TextView
+                        android:id="@+id/textViewRestaurantName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/imageViewRestaurant3"
+                        android:text="SHITAL MESS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Location: Behind College"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="50dp"
+                        android:gravity="left"
+                        android:text="Contact :+917465289230" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/goToStudentMenuPage3"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Menu"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <!-- Restaurant Image -->
+                    <ImageView
+                        android:id="@+id/imageViewRestaurant4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img9" />
+
+                    <!-- Restaurant Name -->
+                    <TextView
+                        android:id="@+id/textViewRestaurantName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/imageViewRestaurant4"
+                        android:text="PRISHA MESS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Location: Mahesh Nagar"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="50dp"
+                        android:gravity="left"
+                        android:text="Contact :+917765289230" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/goToStudentMenuPage4"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Menu"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <!-- Restaurant Image -->
+                    <ImageView
+                        android:id="@+id/imageViewRestaurant5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img11" />
+
+                    <!-- Restaurant Name -->
+                    <TextView
+                        android:id="@+id/textViewRestaurantName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/imageViewRestaurant5"
+                        android:text="Swagat MESS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Location: Ganesh Mandir"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="50dp"
+                        android:gravity="left"
+                        android:text="Contact :+919995289230" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/goToStudentMenuPage5"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="120dp"
+                        android:text="Menu"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/swagatMess"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="20dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant2"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img3" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant2"-->
+<!--                        android:text="SWAGAT MESS"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    &lt;!&ndash; Restaurant Rating-->
+<!--                    <RatingBar-->
+<!--                        android:id="@+id/ratingBarRestaurant"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/textViewRestaurantName"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant"-->
+<!--                        android:numStars="5"-->
+<!--                        android:rating="4"-->
+<!--                        android:stepSize="0.5" />&ndash;&gt;-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+
+
+
+
+<!--                </RelativeLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/prishaMess"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="10dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant3"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img4" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant3"-->
+<!--                        android:text="PRISHA'S MESS"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+
+
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/swadMess"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="10dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant4"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img2" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant4"-->
+<!--                        android:text="SWAD MESS"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    &lt;!&ndash; Restaurant Rating &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+
+
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+<!--            -->
+<!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/vazeMess"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="10dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant5"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img2" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName5"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant5"-->
+<!--                        android:text="VaZe Mess"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    &lt;!&ndash; Restaurant Rating &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+
+
+
+
+
+
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+<!--            -->
+<!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/ganeshMess"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="10dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant6"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img2" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName6"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant6"-->
+<!--                        android:text="Ganesh Mess"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+
+
+
+
+
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+<!--            -->
+<!--            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/card1"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:elevation="10dp"-->
+<!--                app:cardCornerRadius="15dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    &lt;!&ndash; Restaurant Image &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageViewRestaurant7"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/img2" />-->
+
+<!--                    &lt;!&ndash; Restaurant Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/textViewRestaurantName7"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_toEndOf="@id/imageViewRestaurant7"-->
+<!--                        android:text="Pardesi Mess"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="25dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="Location: Main Campus"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="50dp"-->
+<!--                        android:layout_marginLeft="80dp"-->
+<!--                        android:text="contact :+913465289230"/>-->
+<!--                </RelativeLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

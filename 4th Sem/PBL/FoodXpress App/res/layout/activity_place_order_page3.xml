@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/img7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrderPage3">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/userNamePlaceOrder3"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile No."
+        android:layout_marginLeft="30dp"
+        android:inputType="phone"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/userPhoneNumberPlaceOrder3"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+    <Button
+        android:id="@+id/btnUserTimePlaceOrder3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/btncolor1"
+        android:padding="0dp"
+        android:text="Select Time"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="50dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's Menu Below : "
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:background="@drawable/background_image"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:id="@+id/menuListView3"
+        />
+    <!--    <Button-->
+    <!--        android:id="@+id/btnPlaceOrder"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:backgroundTint="@color/btncolor1"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:text="Place Order"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="23dp"-->
+    <!--        app:cornerRadius="50dp" />-->
+    <Button
+        android:id="@+id/btnMakePayment3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/btncolor1"
+        android:padding="15dp"
+        android:text="Make Payment"
+        android:textAllCaps="false"
+        android:textSize="23dp"
+        app:cornerRadius="50dp" />
+
+</LinearLayout>

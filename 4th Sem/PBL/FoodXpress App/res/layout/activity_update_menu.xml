@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/img12"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateMenu">
+
+<!--    <Spinner-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:entries="@array/messList"-->
+<!--        android:prompt="@string/your_prompt_text"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        />-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Food Item here"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/updateFoodItem1"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Food Item here"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/updateFoodItem2"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Food Item here"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/updateFoodItem3"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btnUpdateMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/btncolor1"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textSize="23dp"
+        app:cornerRadius="50dp" />
+
+</LinearLayout>

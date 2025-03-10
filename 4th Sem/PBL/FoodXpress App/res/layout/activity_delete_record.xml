@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/img3"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteRecord">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number Here"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FF0000"
+        android:textColor="@color/black"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/deleteRecord"
+        android:layout_marginRight="30dp"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btnDeleteRecord"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/btncolor1"
+        android:padding="15dp"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textSize="23dp"
+        app:cornerRadius="50dp" />
+
+</LinearLayout>
