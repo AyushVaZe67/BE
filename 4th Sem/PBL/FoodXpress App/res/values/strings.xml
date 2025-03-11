@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FoodXpress</string>
+    <string name="your_prompt_text">Select an item</string>
+</resources>

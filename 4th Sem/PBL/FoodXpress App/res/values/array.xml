@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messList">
+        <item>Aditya Mess</item>
+        <item>Ganesh Mess</item>
+        <item>VaZe Mess</item>
+        <!-- Add more items as needed -->
+    </string-array>
+</resources>
