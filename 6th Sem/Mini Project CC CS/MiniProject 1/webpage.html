@@ -1,7 +1,46 @@
-<html>
-    <body>
-        <h1>
-            <h1>Chutiya</h1>
-        </h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stored XSS Demo</title>
+</head>
+<body>
+  <h2>Blog Post</h2>
+  <p>This is a blog post. Leave your comment below:</p>
+
+  <form id="commentForm">
+    <input type="text" id="commentInput" placeholder="Enter your comment">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Comments:</h3>
+  <div id="commentsSection"></div>
+
+  <script>
+    const form = document.getElementById("commentForm");
+    const commentsSection = document.getElementById("commentsSection");
+
+    // Store comments in localStorage to simulate "stored" behavior
+    const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+
+    function displayComments() {
+      commentsSection.innerHTML = "";
+      storedComments.forEach(comment => {
+        const div = document.createElement("div");
+        div.innerHTML = comment; // No sanitization = XSS vulnerability
+        commentsSection.appendChild(div);
+      });
+    }
+
+    displayComments();
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const comment = document.getElementById("commentInput").value;
+      storedComments.push(comment);
+      localStorage.setItem("comments", JSON.stringify(storedComments));
+      displayComments();
+    });
+  </script>
+</body>
 </html>
