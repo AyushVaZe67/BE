@@ -12,4 +12,3 @@ Complete academic materials from my Bachelor's degree in Artificial Intelligence
 🎯 Final year project
 
 🛠️ Technologies: Python • Machine Learning • SQL • Data Analytics • Deep Learning
-
